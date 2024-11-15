@@ -6,6 +6,16 @@
 
 This package contains minimum code to run the CloudSEN12 models☁️ proposed in [Aybar et al. 2022](https://www.nature.com/articles/s41597-022-01878-02) and [Aybar et al. 2024](https://www.sciencedirect.com/science/article/pii/S2352340924008163). 
 
+
+The code of the package has been slightly modified to include it in the tutorial for segmentation methods within the `meteors` package. The vignette utilizing the code can be accessed [here](https://xai4space.github.io/meteors/latest/tutorials/segmentation/). We highly recommend checking out this tutorial and the `meteors`, which helps understanding AI used in Remote Sensing!
+
+Modifications done to the following code include:
+- adjustments of the `predict` and `padded_predict` functions to read and output `torch.Tensor` type objects
+- remove the `georeader-spaceml` dependency as it is not necessary for the `meteors` package.
+- added support for soft labels prediction for the model (model outputs the probability of each pixel belonging to each class)
+
+
+To install the package run:
 ```
 pip install cloudsen12_models
 ```
